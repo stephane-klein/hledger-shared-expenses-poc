@@ -1,0 +1,102 @@
+account expenses:commun:courses
+account expenses:commun:pharmacie
+account expenses:commun:restaurant
+account expenses:commun:loisir
+account assets:bank:bob
+account assets:bank:alice
+account assets:bank:commun:bob
+account assets:bank:commun:alice
+account income:salary:bob
+account income:salary:alice
+
+; 2021-12
+
+2021-12-30 Salaire Bob, mois décembre 2021
+    assets:bank:bob                           2000,00 €
+    income:salary:bob
+
+2021-12-30 Salaire Alice, mois décembre 2021
+    assets:bank:alice                         3000,00 €
+    income:salary:alice
+
+; Ratio de contribution :
+;
+; bob = 2000 / 5000 = 0,4
+; alice = 3000 / 5000 = 0,6
+
+
+; 2022-01
+
+2022-01-04 Courses Auchan
+    expenses:commun:courses                 120,69 €  ; auchan:
+    assets:bank:commun:bob                  -48,27 €  ; 120,69 * 0,4
+    assets:bank:commun:alice                -72,42 €  ; 120,69 - 48,27
+
+2022-01-05 Courses Biocoop
+    expenses:commun:courses                  23,20 €  ; biocoop:
+    assets:bank:commun:bob                   -9,28 €  ;  23,20 * 0,4
+    assets:bank:commun:alice                -13,92 €  ;  23,20 - 9,28
+
+2022-01-05 Courses Picard
+    expenses:commun:courses                  56,65 €  ; picard:
+    assets:bank:commun:bob                  -22,66 €  ;  56,65 * 0,4
+    assets:bank:commun:alice                -33,99 €  ; 56,65 - 22,66
+
+2022-01-09 Restaurant crêperie Le Ptit Josslin
+    expenses:commun:restaurant               29,00 €  ; creperie:
+    assets:bank:commun:bob                  -11,60 €  ; 29,00 * 0,4
+    assets:bank:commun:alice                -17,40 €  ; 29,00 - 11,60
+
+2022-01-11 Courses Inter Marché
+    expenses:commun:courses                  86,15 €  ; intermarche:
+    assets:bank:commun:bob                  -34,46 €  ;  86,15 * 0,4
+    assets:bank:commun:alice                -51,69 €  ;  86,15 - 34,46
+
+2022-01-14 Courses Inter Marché
+    expenses:commun:courses                   8,13 €  ; intermarche:
+    assets:bank:commun:bob                   -3,25 €  ; 8,13 * 0,4
+    assets:bank:commun:alice                 -4,88 €  ; 8,13 - 3,25
+
+2022-01-18 Courses Auchan
+    expenses:commun:courses                  73,87 €  ; auchan:
+    assets:bank:commun:bob                  -29,54 €  ; 73,87 * 0,4
+    assets:bank:commun:alice                -44,33 €  ; 73,87 - 29,54
+
+2022-01-18 Courses Auchan
+    expenses:commun:courses                  31,48 €  ; auchan:
+    assets:bank:commun:bob                  -12,59 €  ; 31,48 * 0,4
+    assets:bank:commun:alice                -18,89 €  ; 31,48 - 12,59
+
+; cutting-off…
+
+; 2023-03
+
+2023-03-25 Restaurant, crêperie, Le Flibustier
+    expenses:commun:restaurant               65,50 €  ; creperie:
+    assets:bank:commun:bob                  -26,20 €  ; 65,50 * 0,4
+    assets:bank:commun:alice                -39,30 €  ; 65,50 - 26,20
+
+2023-03-25 Musée de l'armée
+    expenses:commun:loisir                   56,00 €  ; musee:
+    assets:bank:commun:bob                  -22,40 €  ; 56,00 * 0,4
+    assets:bank:commun:alice                -33,60 €  ; 56,00 - 22,40
+
+2023-03-26 Billet Reduc, théatre
+    expenses:commun:loisir                   91,50 €  ; theatre:
+    assets:bank:commun:bob                  -36,60 €  ; 91,50 * 0,4
+    assets:bank:commun:alice                -54,90 €  ; 91,50 - 36,60
+
+2023-03-26 Courses Supermarché G20
+    expenses:commun:courses                  16,05 €  ; g20:
+    assets:bank:commun:bob                   -6,42 €  ; 16,05 * 0,4
+    assets:bank:commun:alice                 -9,63 €  ; 16,05 - 6,42
+
+2023-03-27 Courses Supermarché G20
+    expenses:commun:courses                  13,37 €  ; g20:
+    assets:bank:commun:bob                   -5,34 €  ; 13,37 * 0,4
+    assets:bank:commun:alice                 -8,03 €  ; 13,37 - 5,34
+
+2023-03-28 Courses Biocoop Montrouge
+    expenses:commun:courses                  30,92 €  ; biocoop:
+    assets:bank:commun:bob                  -12,36 €  ; 30,92 * 0,4
+    assets:bank:commun:alice                -18,56 €  ; 30,92 - 12,36
