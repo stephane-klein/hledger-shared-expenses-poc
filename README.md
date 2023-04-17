@@ -1,6 +1,6 @@
 # plain text accounting shared expenses based on hledger POC
 
-This project is in work in progress.  
+See also https://github.com/stephane-klein/beancount-shared-expenses-poc  
 
 Repository starting point issue (in French): https://github.com/stephane-klein/backlog/issues/193
 
