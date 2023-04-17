@@ -40,6 +40,14 @@ account income:salary:alice
 
 ; 2022-01
 
+2022-01-02 Recharge compte commun Bob
+    assets:bank:commun:bob                           200,00 €
+    assets:bank:bob
+
+2022-01-02 Recharge compte commun Alice
+    assets:bank:commun:alice                           300,00 €
+    assets:bank:alice
+
 2022-01-04 Courses Auchan
 {{- shared_expense('expenses:commun:courses', 120.69, 'auchan:') }}
 
@@ -91,6 +99,14 @@ account income:salary:alice
 
 2023-03-25 Musée de l'armée
 {{- shared_expense('expenses:commun:loisir', 56.00, 'musee:') }}
+
+2022-03-28 Recharge compte commun Bob
+    assets:bank:commun:bob                           200,00 €
+    assets:bank:bob
+
+2022-03-28 Recharge compte commun Alice
+    assets:bank:commun:alice                           300,00 €
+    assets:bank:alice
 
 2023-03-26 Billet Reduc, théatre
 {{- shared_expense('expenses:commun:loisir', 91.50, 'theatre:') }}

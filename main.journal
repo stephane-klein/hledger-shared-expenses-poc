@@ -29,6 +29,14 @@ account income:salary:alice
 
 ; 2022-01
 
+2022-01-02 Recharge compte commun Bob
+    assets:bank:commun:bob                           200,00 €
+    assets:bank:bob
+
+2022-01-02 Recharge compte commun Alice
+    assets:bank:commun:alice                           300,00 €
+    assets:bank:alice
+
 2022-01-04 Courses Auchan
     expenses:commun:courses                      120.69 €  ; auchan:
     assets:bank:commun:bob                       -48.27 €  ; 120.69 * 0.4
@@ -95,6 +103,14 @@ account income:salary:alice
     expenses:commun:loisir                      56.0 €  ; musee:
     assets:bank:commun:bob                       -26.32 €  ; 56.0 * 0.47
     assets:bank:commun:alice                     -29.68 €  ; 56.0 - 26.32
+
+2022-03-28 Recharge compte commun Bob
+    assets:bank:commun:bob                           200,00 €
+    assets:bank:bob
+
+2022-03-28 Recharge compte commun Alice
+    assets:bank:commun:alice                           300,00 €
+    assets:bank:alice
 
 2023-03-26 Billet Reduc, théatre
     expenses:commun:loisir                      91.5 €  ; theatre:
