@@ -34,5 +34,5 @@ $ pip install -r requirements.txt
 Edit `main.journal.j2` and then execute:
 
 ```
-$ jinja main.journal.j2  > main.journal
+$ ./preprocess.py > main.journal
 ```
