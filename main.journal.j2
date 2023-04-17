@@ -19,20 +19,23 @@ account income:salary:alice
 
 ; 2021-12
 
+{%- set bob_salary = 2000.00 -%}
+{%- set alice_salary = 3000.00 %}
+
 2021-12-30 Salaire Bob, mois décembre 2021
-    assets:bank:bob                           2000,00 €
+    assets:bank:bob                           {{ bob_salary }} €
     income:salary:bob
 
 2021-12-30 Salaire Alice, mois décembre 2021
-    assets:bank:alice                         3000,00 €
+    assets:bank:alice                         {{ alice_salary }} €
     income:salary:alice
 
 ; Ratio de contribution :
 ;
-{%- set ratio_bob = int((2000 / 5000) * 100) -%}
-{%- set ratio_alice = int((3000 / 5000) * 100) %}
-; ratio_bob = 2000 / 5000 = {{ ratio_bob / 100 }}
-; ratio_alice = 3000 / 5000 = {{ ratio_alice / 100 }}
+{%- set ratio_bob = int((bob_salary / (bob_salary + alice_salary)) * 100) -%}
+{%- set ratio_alice = int((alice_salary / (bob_salary + alice_salary)) * 100) %}
+; ratio_bob = {{ bob_salary }} / {{ bob_salary + alice_salary }} = {{ ratio_bob / 100 }}
+; ratio_alice = {{ alice_salary }} / {{ bob_salary + alice_salary }} = {{ ratio_alice / 100 }}
 
 
 ; 2022-01
@@ -64,6 +67,24 @@ account income:salary:alice
 ; cutting-off…
 
 ; 2023-03
+
+{%- set bob_salary = 2500.00 -%}
+{%- set alice_salary = 2800.00 %}
+
+2021-12-30 Salaire Bob, mois février 2023
+    assets:bank:bob                           {{ bob_salary }} €
+    income:salary:bob
+
+2021-12-30 Salaire Alice, mois février 2023
+    assets:bank:alice                         {{ alice_salary }} €
+    income:salary:alice
+
+; Ratio de contribution :
+;
+{%- set ratio_bob = int((bob_salary / (bob_salary + alice_salary)) * 100) -%}
+{%- set ratio_alice = int((alice_salary / (bob_salary + alice_salary)) * 100) %}
+; ratio_bob = {{ bob_salary }} / {{ bob_salary + alice_salary }} = {{ ratio_bob / 100 }}
+; ratio_alice = {{ alice_salary }} / {{ bob_salary + alice_salary }} = {{ ratio_alice / 100 }}
 
 2023-03-25 Restaurant, crêperie, Le Flibustier
 {{- shared_expense('expenses:commun:restaurant', 31.48, 'creperie:') }}

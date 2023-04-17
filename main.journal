@@ -14,17 +14,17 @@ account income:salary:alice
 ; 2021-12
 
 2021-12-30 Salaire Bob, mois décembre 2021
-    assets:bank:bob                           2000,00 €
+    assets:bank:bob                           2000.0 €
     income:salary:bob
 
 2021-12-30 Salaire Alice, mois décembre 2021
-    assets:bank:alice                         3000,00 €
+    assets:bank:alice                         3000.0 €
     income:salary:alice
 
 ; Ratio de contribution :
 ;
-; ratio_bob = 2000 / 5000 = 0.4
-; ratio_alice = 3000 / 5000 = 0.6
+; ratio_bob = 2000.0 / 5000.0 = 0.4
+; ratio_alice = 3000.0 / 5000.0 = 0.6
 
 
 ; 2022-01
@@ -73,32 +73,45 @@ account income:salary:alice
 
 ; 2023-03
 
+2021-12-30 Salaire Bob, mois février 2023
+    assets:bank:bob                           2500.0 €
+    income:salary:bob
+
+2021-12-30 Salaire Alice, mois février 2023
+    assets:bank:alice                         2800.0 €
+    income:salary:alice
+
+; Ratio de contribution :
+;
+; ratio_bob = 2500.0 / 5300.0 = 0.47
+; ratio_alice = 2800.0 / 5300.0 = 0.52
+
 2023-03-25 Restaurant, crêperie, Le Flibustier
     expenses:commun:restaurant                      31.48 €  ; creperie:
-    assets:bank:commun:bob                       -12.59 €  ; 31.48 * 0.4
-    assets:bank:commun:alice                     -18.89 €  ; 31.48 - 12.59
+    assets:bank:commun:bob                       -14.79 €  ; 31.48 * 0.47
+    assets:bank:commun:alice                     -16.69 €  ; 31.48 - 14.79
 
 2023-03-25 Musée de l'armée
     expenses:commun:loisir                      56.0 €  ; musee:
-    assets:bank:commun:bob                       -22.4 €  ; 56.0 * 0.4
-    assets:bank:commun:alice                     -33.6 €  ; 56.0 - 22.4
+    assets:bank:commun:bob                       -26.32 €  ; 56.0 * 0.47
+    assets:bank:commun:alice                     -29.68 €  ; 56.0 - 26.32
 
 2023-03-26 Billet Reduc, théatre
     expenses:commun:loisir                      91.5 €  ; theatre:
-    assets:bank:commun:bob                       -36.6 €  ; 91.5 * 0.4
-    assets:bank:commun:alice                     -54.9 €  ; 91.5 - 36.6
+    assets:bank:commun:bob                       -43.0 €  ; 91.5 * 0.47
+    assets:bank:commun:alice                     -48.5 €  ; 91.5 - 43.0
 
 2023-03-26 Courses Supermarché G20
     expenses:commun:courses                      16.05 €  ; g20:
-    assets:bank:commun:bob                       -6.42 €  ; 16.05 * 0.4
-    assets:bank:commun:alice                     -9.63 €  ; 16.05 - 6.42
+    assets:bank:commun:bob                       -7.54 €  ; 16.05 * 0.47
+    assets:bank:commun:alice                     -8.51 €  ; 16.05 - 7.54
 
 2023-03-27 Courses Supermarché G20
     expenses:commun:courses                      13.37 €  ; g20:
-    assets:bank:commun:bob                       -5.34 €  ; 13.37 * 0.4
-    assets:bank:commun:alice                     -8.03 €  ; 13.37 - 5.34
+    assets:bank:commun:bob                       -6.28 €  ; 13.37 * 0.47
+    assets:bank:commun:alice                     -7.09 €  ; 13.37 - 6.28
 
 2023-03-28 Courses Biocoop Montrouge
     expenses:commun:courses                      30.92 €  ; biocoop:
-    assets:bank:commun:bob                       -12.36 €  ; 30.92 * 0.4
-    assets:bank:commun:alice                     -18.56 €  ; 30.92 - 12.36
+    assets:bank:commun:bob                       -14.53 €  ; 30.92 * 0.47
+    assets:bank:commun:alice                     -16.39 €  ; 30.92 - 14.53
