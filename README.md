@@ -25,3 +25,14 @@ $ hledger web
 ```
 
 Go to http://127.0.0.1:5000/journal
+
+
+```sh
+$ pip install -r requirements.txt
+```
+
+Edit `main.journal.j2` and then execute:
+
+```
+$ jinja main.journal.j2  > main.journal
+```

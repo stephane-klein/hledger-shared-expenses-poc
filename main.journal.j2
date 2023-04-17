@@ -1,4 +1,8 @@
-
+{% macro shared_expense(account, amount, tags='') -%}
+    {{ account }}                      {{ amount }} €  ; {{tags}}
+    assets:bank:commun:bob             -{{ amount * ratio_bob }} €  ; {{ amount }} * {{ ratio_bob }}
+    assets:bank:commun:alice           -{{ amount - (amount * ratio_bob )}} €  ; {{ amount }} - {{ amount * ratio_bob }}
+{%- endmacro %}
 
 account expenses:commun:courses
 account expenses:commun:pharmacie
@@ -23,14 +27,14 @@ account income:salary:alice
 
 ; Ratio de contribution :
 ;
+{%- set ratio_bob = 2000 / 5000 -%}
+{%- set ratio_alice = 3000 / 5000 %}
 
 
 ; 2022-01
 
 2022-01-04 Courses Auchan
-expenses:commun:courses                      120.69 €  ; auchan:
-    assets:bank:commun:bob             -48.276 €  ; 120.69 * 0.4
-    assets:bank:commun:alice           -72.41399999999999 €  ; 120.69 - 48.276
+{{ shared_expense('expenses:commun:courses', 120.69, 'auchan:') }}
 
 ;    expenses:commun:courses                 120,69 €  ; auchan:
 ;    assets:bank:commun:bob                  -48,27 €  ; 120,69 * 0,4
